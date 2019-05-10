@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/inputmask/dist/jquery.inputmask.bundle.js"></script>
+    <script src="/node_modules/inputmask/dist/inputmask/dependencyLibs/inputmask.dependencyLib.jquery.js"></script>
+</head>
+<body>
+    <header>
+        <div class="phone-icon"></div>
+        <div class="search-field">
+            <span class="icon"><i class="fa fa-search"></i></span>
+            <input type="search" id="search">
+        </div>
+    </header>
+    <div class="contacts">
+        <ul class="fav-list"></ul>
+        <ul class="contact-list">
+            <li class="contact-item">
+                <div class="avatar">
+                    <img src="" alt="" class="face">
+                </div>
+                <div class="info">
+                    <span class="name"></span>
+                    <span class="phone"></span>
+                </div>
+                <div class="nav-button">
+                    <button type="button" class="del-btn fa fa-times fa-lg"></button>
+                    <button type="button" id="fav-btn" class="fav-btn fa fa-heart-o fa-lg"></button>
+                </div>
+                <hr>
+            </li>
+        </ul>
+    </div>
+    <footer>
+        <button type="button" class="add-btn" id="add"><p class="add">Добавить</p></button>
+    </footer>
+    <div class="add-contact">
+        <header>
+            <div class="phone-icon"></div>
+            <div class="search-field"><p class="title">Add contact</p></div>
+        </header>
+        <form class="form" method="post">
+            <label for="name-field">Name</label>
+            <input type="text" name="name" id="name-field" maxlength="20"
+                   data-inputmask-regex="[A-Za-zА-Яа-яЁё]{20}" required>
+            <label for="phone-field">Phone</label>
+            <input type="tel" name="phone" id="phone-field" required>
+            <input type="checkbox" name="favorites" id="isFavorites">Favorites
+        </form>
+        <button type="submit" class="add-btn" id="create-btn"><p class="add">Создать</p></button>
+    </div>
+	<script src="main.js"></script>
+</body>
+</html>
